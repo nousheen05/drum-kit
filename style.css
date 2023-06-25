@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background: url('./images/background.jpg') ;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter {
+    margin-bottom: 2px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: #fff;
+}
+.sound {
+    margin-bottom: 2px;
+    font-size: 13px;
+    color: #FEFF86;
+    font-weight: 1000;
+}
+
+.key {
+    height: 80px;
+    width: 90px;
+    border: black 3px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
