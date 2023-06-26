@@ -1,13 +1,20 @@
-for(var i=0 ;i<9;i++)
+for(var i=0 ;i<8;i++)
 {
-    document.querySelector(".key")[i].addEventListener("click",function()
+    document.querySelectorAll(".key")[i].addEventListener("click",function()
     {
-        var button = this.classList[1];
-        playSound(button);
+        var x = this.classList[1];
+        playSound(x);
+        animation(x);
     });
 }
 
 
+document.addEventListener("keydown", function(event)
+{
+    var x = event.key;
+    playSound(x);
+    animation(x);
+});
 
 
 function playSound(key) {
@@ -56,4 +63,17 @@ function playSound(key) {
       default: console.log(key);
   
     }
+  }
+
+
+  function animation(x)
+  {
+        var classClicked = "."+ x ;
+        document.querySelector(classClicked).classList.add("newAnimation");
+
+
+        setTimeout(function(){
+            document.querySelector(classClicked).classList.remove("newAnimation");
+        }, 100);
+        
   }
